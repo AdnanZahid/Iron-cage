@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Iron cage mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Iron cage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E6966F2B1B4045480063EFF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6966F491B4045480063EFF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6966F5D1B4045660063EFF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6966F741B4045660063EFF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
