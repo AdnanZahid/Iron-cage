@@ -60,6 +60,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"soundOff"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)MusicAction {
@@ -73,7 +75,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         if (![[AudioFactory sharedInstance] isPlaying]) {
-            [AudioFactory musicWithFilename:@"GameScene"];
+            [AudioFactory musicWithFilename:@"MainMenuScene"];
         }
     }
     else {
@@ -84,11 +86,15 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"musicOff"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)BackAction {
     
     [SceneFactory sceneFromScene:[MenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Back" target:self];
 }
 
 @end

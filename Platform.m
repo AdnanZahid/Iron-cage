@@ -38,6 +38,12 @@
                     gear.sprite.zPosition = 3;
                     
                     [self addChild:gear.sprite];
+                    
+                    
+                    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"soundOff"]) {
+                        
+                        [gear.sprite runAction:[SKAction playSoundFileNamed:@"Gear.wav" waitForCompletion:NO]];
+                    }
                 }
                 else if (random == 1) {
                     CGFloat drillDistance = (length - 1) * tile.size.width;
@@ -46,6 +52,11 @@
                     drill.sprite.zPosition = 1;
                     
                     [self addChild:drill.sprite];
+                    
+                    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"soundOff"]) {
+                        
+                        [drill.sprite runAction:[SKAction playSoundFileNamed:@"Drill.wav" waitForCompletion:NO]];
+                    }
                 }
             }
             

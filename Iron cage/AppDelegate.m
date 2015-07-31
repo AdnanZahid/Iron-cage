@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [iRate sharedInstance].applicationBundleID = @"org.eu5.adnan-zahid.ironcage";
+    [iRate sharedInstance].applicationBundleID = @"ironcage";
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     [iRate sharedInstance].previewMode = NO;

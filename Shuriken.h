@@ -15,6 +15,8 @@
 
 + (SKSpriteNode *)sharedInstance;
 
++ (SKSpriteNode *)sharedInstanceOnce;
+
 - (id)init;
 
 @end

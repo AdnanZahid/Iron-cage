@@ -25,8 +25,8 @@
         _sprite.physicsBody.allowsRotation = NO;
         
         _sprite.physicsBody.categoryBitMask = HEROCATEGORY;
-        _sprite.physicsBody.contactTestBitMask = GROUNDCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
-        _sprite.physicsBody.collisionBitMask = GROUNDCATEGORY | OBSTACLECATEGORY;
+        _sprite.physicsBody.contactTestBitMask = GROUNDCATEGORY | CHAINCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
+        _sprite.physicsBody.collisionBitMask = GROUNDCATEGORY | CHAINCATEGORY | OBSTACLECATEGORY;
     });
     
     return _sprite;

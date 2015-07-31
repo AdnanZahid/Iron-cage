@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Adnan Zahid. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
 #import "SKButton.h"
 
 @interface Button : NSObject

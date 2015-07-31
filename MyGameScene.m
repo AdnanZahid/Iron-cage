@@ -23,6 +23,8 @@
         #else
             [self addHint:@"Press space to jump, F to fire" onOrOff:@"tapLeftRightOff"];
         #endif
+                
+        [AudioFactory soundWithFilename:@"Walk" target:self];
     });
     
     difficulty = [[NSUserDefaults standardUserDefaults] integerForKey:@"difficulty"];
@@ -45,11 +47,8 @@
     
     gems = 0;
     
-    universe = [SKNode node];
-    [self addChild:universe];
-    
     world = [SKNode node];
-    [universe addChild:world];
+    [self addChild:world];
     
     [self addPlatform:0];
     
@@ -80,8 +79,7 @@
     
     [self addHealthBar];
     
-    SKButton *pauseButton = [[[Button alloc] initWithNameAndScale:@"Pause" offset:-1 X:width Y:0 scale:0.5f] button];
-    pauseButton.title.text = @"||";
+    pauseButton = [[[Button alloc] initWithNameAndScale:@"Pause" offset:-1 X:width Y:0 scale:0.5f] button];
     [self addChild:pauseButton];
     
     self.physicsWorld.contactDelegate = self;
@@ -91,20 +89,25 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInNode:self];
-    
-    if (canJump) {
-        canJump = NO;
-        if (touchLocation.x < self.frame.size.width / 2) {
-            
-            [hero.physicsBody applyImpulse:CGVectorMake(0, jumpHeight)];
-        }
-    }
-    
-    if (touchLocation.x > self.frame.size.width / 2) {
+    if (!gameOver) {
+        UITouch *touch = [touches anyObject];
+        CGPoint touchLocation = [touch locationInNode:self];
         
-        [self addShuriken];
+        if (canJump) {
+            canJump = NO;
+            if (touchLocation.x < self.frame.size.width / 2) {
+                
+                NSString *jumpSound = [NSString stringWithFormat:@"Jump%d", 1 + arc4random_uniform(8)];
+                [AudioFactory soundWithFilename:jumpSound target:self];
+                
+                [hero.physicsBody applyImpulse:CGVectorMake(0, jumpHeight)];
+            }
+        }
+        
+        if (touchLocation.x > self.frame.size.width / 2) {
+            
+            [self addShuriken];
+        }
     }
 }
 
@@ -112,17 +115,22 @@
 
 - (void)keyDown:(NSEvent *)event {
     
-    if (canJump) {
-        canJump = NO;
-        if(event.keyCode == SPACE) {
-            
-            [hero.physicsBody applyImpulse:CGVectorMake(0, jumpHeight)];
+    if (!gameOver) {
+        if (canJump) {
+            canJump = NO;
+            if(event.keyCode == SPACE) {
+                
+                NSString *jumpSound = [NSString stringWithFormat:@"Jump%d", 1 + arc4random_uniform(8)];
+                [AudioFactory soundWithFilename:jumpSound target:self];
+                
+                [hero.physicsBody applyImpulse:CGVectorMake(0, jumpHeight)];
+            }
         }
-    }
-    
-    if(event.keyCode == F_KEY) {
         
-        [self addShuriken];
+        if(event.keyCode == F_KEY) {
+            
+            [self addShuriken];
+        }
     }
 }
 
@@ -146,6 +154,15 @@
     if (firstBody.categoryBitMask == HEROCATEGORY) {
         if (secondBody.categoryBitMask == GROUNDCATEGORY) {
             
+            if (!canJump) {
+                
+                [AudioFactory soundWithFilename:@"Walk" target:self];
+            }
+            
+            canJump = YES;
+        }
+        else if (secondBody.categoryBitMask == CHAINCATEGORY) {
+            
             canJump = YES;
         }
         else if (secondBody.categoryBitMask == SHIELDCATEGORY) {
@@ -168,6 +185,8 @@
         }
         else if (secondBody.categoryBitMask == GEMCATEGORY) {
             
+            [AudioFactory soundWithFilename:@"Gem" target:self];
+            
             [secondBody.node removeFromParent];
             
             [self increaseGems];
@@ -176,16 +195,13 @@
     else if (firstBody.categoryBitMask == SHURIKENCATEGORY) {
         if (secondBody.categoryBitMask == OBSTACLECATEGORY) {
             
-            SKSpriteNode *shuriken = [Shuriken sharedInstance];
-            
-            [shuriken setHidden:YES];
-            
             [secondBody.node removeFromParent];
         }
     }
     else if (firstBody.categoryBitMask == LEFTCATEGORY) {
         
         if (secondBody.categoryBitMask == GROUNDCATEGORY ||
+            secondBody.categoryBitMask == CHAINCATEGORY ||
             secondBody.categoryBitMask == OBSTACLECATEGORY ||
             secondBody.categoryBitMask == SHIELDCATEGORY ||
             secondBody.categoryBitMask == PAINKILLERCATEGORY ||
@@ -218,7 +234,7 @@
         if (hero.position.y > height - hero.size.height/2) {
             
             CGFloat heroVelocityY = hero.physicsBody.velocity.dy;
-            hero.physicsBody.velocity = CGVectorMake(hero.physicsBody.velocity.dx, MIN(abs(heroVelocityY * 0.8f), heroVelocityY));
+            hero.physicsBody.velocity = CGVectorMake(hero.physicsBody.velocity.dx, MIN(fabs(heroVelocityY * 0.8f), heroVelocityY));
         }
         if (hero.position.y < 0) {
             
@@ -235,7 +251,7 @@
         
         if (enemyAlive) {
             
-            SKSpriteNode *shuriken = [Shuriken sharedInstance];
+            SKSpriteNode *shuriken = [Shuriken sharedInstanceOnce];
             
             if ([enemy.sprite intersectsNode:hero]) {
                 
@@ -246,8 +262,6 @@
             else if ([enemy.sprite intersectsNode:shuriken]) {
                 
                 enemyAlive = NO;
-                
-                [shuriken setHidden:YES];
                 
                 [enemy.sprite setHidden:YES];
             }
@@ -282,12 +296,16 @@
 
 -(void)PauseAction {
     
-    gameOver = YES;
+    [pauseButton removeFromParent];
     
     [self pause];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 -(void)ResumeAction {
+    
+    [self addChild:pauseButton];
     
     [resume removeFromParent];
     [restart removeFromParent];
@@ -295,23 +313,23 @@
     
     gameOver = NO;
     
-    self.paused = NO;
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 -(void)RestartAction {
     
-    [universe removeAllChildren];
-    
     [SceneFactory sceneFromScene:[MyGameScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 -(void)ExitAction {
     
-    [universe removeAllChildren];
-    
     [[AudioFactory sharedInstance] stop];
     
     [SceneFactory sceneFromScene:[MainMenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Back" target:self];
 }
 
 @end

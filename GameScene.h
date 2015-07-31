@@ -28,12 +28,12 @@
 #endif
 #import "GameKitHelper.h"
 #import "CloudyText.h"
+#import "AudioFactory.h"
 
 @interface GameScene : SKScene <EnemyDelegate, SKPhysicsContactDelegate> {
     
     int difficulty;
     
-    SKNode *universe;
     SKNode *world;
     
     CGFloat width;
@@ -70,6 +70,8 @@
     SKButton *resume;
     SKButton *restart;
     SKButton *exit;
+    
+    SKButton *pauseButton;
 }
 
 @property (nonatomic, strong) PBParallaxScrolling *parallaxBackground;
@@ -80,7 +82,6 @@
 - (void)addChain:(NSUInteger)distance;
 - (void)addHook:(NSUInteger)distance;
 - (void)addPlatformOrChain;
-- (void)addparticle;
 - (void)addBlood;
 - (void)addPickupShield:(NSUInteger)distance;
 - (void)addShield;
@@ -95,7 +96,6 @@
 - (void)killpain;
 - (void)damage;
 - (void)increaseGems;
-- (void)addBlur;
 - (void)addParallax;
 - (void)respawnEnemy:(CGFloat)X Y:(CGFloat)Y;
 

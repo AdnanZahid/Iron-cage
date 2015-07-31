@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
-   version = "1.3">
+   LastUpgradeVersion = "0700"
+   version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6966F2B1B4045480063EFF4"
-               BuildableName = "Iron cage.app"
-               BlueprintName = "Iron cage"
+               BlueprintIdentifier = "E6966F5D1B4045660063EFF4"
+               BuildableName = "Iron Cage.app"
+               BlueprintName = "Iron Cage"
                ReferencedContainer = "container:Iron cage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6966F491B4045480063EFF4"
-               BuildableName = "Iron cageTests.xctest"
-               BlueprintName = "Iron cageTests"
+               BlueprintIdentifier = "E6966F741B4045660063EFF4"
+               BuildableName = "Iron cage macTests.xctest"
+               BlueprintName = "Iron cage macTests"
                ReferencedContainer = "container:Iron cage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6966F491B4045480063EFF4"
-               BuildableName = "Iron cageTests.xctest"
-               BlueprintName = "Iron cageTests"
+               BlueprintIdentifier = "E6966F741B4045660063EFF4"
+               BuildableName = "Iron cage macTests.xctest"
+               BlueprintName = "Iron cage macTests"
                ReferencedContainer = "container:Iron cage.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,12 +56,14 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6966F2B1B4045480063EFF4"
-            BuildableName = "Iron cage.app"
-            BlueprintName = "Iron cage"
+            BlueprintIdentifier = "E6966F5D1B4045660063EFF4"
+            BuildableName = "Iron Cage.app"
+            BlueprintName = "Iron Cage"
             ReferencedContainer = "container:Iron cage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -71,13 +73,15 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6966F2B1B4045480063EFF4"
-            BuildableName = "Iron cage.app"
-            BlueprintName = "Iron cage"
+            BlueprintIdentifier = "E6966F5D1B4045660063EFF4"
+            BuildableName = "Iron Cage.app"
+            BlueprintName = "Iron Cage"
             ReferencedContainer = "container:Iron cage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,12 +94,13 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6966F2B1B4045480063EFF4"
-            BuildableName = "Iron cage.app"
-            BlueprintName = "Iron cage"
+            BlueprintIdentifier = "E6966F5D1B4045660063EFF4"
+            BuildableName = "Iron Cage.app"
+            BlueprintName = "Iron Cage"
             ReferencedContainer = "container:Iron cage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

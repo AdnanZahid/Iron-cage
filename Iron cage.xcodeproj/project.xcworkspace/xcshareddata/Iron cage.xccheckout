@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>012032B1-520C-4D0E-B86F-18C57E57EAAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Iron cage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B52E30DE27C3236CE29BDC64DB635CF1C062F726</key>
+		<string>https://github.com/AdnanZahid/Iron-cage.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Iron cage.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B52E30DE27C3236CE29BDC64DB635CF1C062F726</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AdnanZahid/Iron-cage.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B52E30DE27C3236CE29BDC64DB635CF1C062F726</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B52E30DE27C3236CE29BDC64DB635CF1C062F726</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Iron%20cage</string>
+		</dict>
+	</array>
+</dict>
+</plist>

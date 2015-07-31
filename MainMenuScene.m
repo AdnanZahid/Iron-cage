@@ -16,7 +16,7 @@ CGFloat height;
 - (void)didMoveToView:(SKView *)view {
     
     if (![[AudioFactory sharedInstance] isPlaying]) {
-        [AudioFactory musicWithFilename:@"GameScene"];
+        [AudioFactory musicWithFilename:@"MainMenuScene"];
     }
     
     width = CGRectGetMaxX(self.frame);
@@ -46,6 +46,8 @@ CGFloat height;
     GameKitHelper *gameKitHelper = [GameKitHelper sharedGameKitHelper];
     
     [gameKitHelper authenticateLocalPlayer];
+    
+    [GameKitHelper reportScore:[[NSUserDefaults standardUserDefaults] integerForKey:@"highscore1"]];
 }
 
 - (void)showAuthenticationViewController {
@@ -61,16 +63,22 @@ CGFloat height;
 - (void)PlayAction {
     
     [SceneFactory sceneFromScene:[MyGameScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 - (void)GuideAction {
     
     [SceneFactory sceneFromScene:[GuideScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 - (void)MenuAction {
     
     [SceneFactory sceneFromScene:[MenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 

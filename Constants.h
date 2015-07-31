@@ -21,7 +21,8 @@ typedef NS_ENUM(uint32_t, CategoryType) {
     OBSTACLECATEGORY   = 0x1 << 5,
     SHIELDCATEGORY     = 0x1 << 6,
     PAINKILLERCATEGORY = 0x1 << 7,
-    GEMCATEGORY        = 0x1 << 8
+    GEMCATEGORY        = 0x1 << 8,
+    CHAINCATEGORY      = 0x1 << 9
 };
 
 typedef NS_ENUM(uint32_t, KeyType) {

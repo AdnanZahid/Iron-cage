@@ -55,7 +55,7 @@ CGFloat height;
     
     boundary.physicsBody.categoryBitMask = LEFTCATEGORY;
     
-    boundary.physicsBody.contactTestBitMask = GROUNDCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
+    boundary.physicsBody.contactTestBitMask = GROUNDCATEGORY | CHAINCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
     boundary.physicsBody.collisionBitMask = 0;
     
     [self addChild:boundary];
@@ -72,7 +72,7 @@ CGFloat height;
     
     boundary.physicsBody.categoryBitMask = LEFTCATEGORY;
     
-    boundary.physicsBody.contactTestBitMask = GROUNDCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
+    boundary.physicsBody.contactTestBitMask = GROUNDCATEGORY | CHAINCATEGORY | OBSTACLECATEGORY | SHIELDCATEGORY | PAINKILLERCATEGORY | GEMCATEGORY;
     boundary.physicsBody.collisionBitMask = 0;
     
     [self addChild:boundary];

@@ -16,7 +16,7 @@ static AVAudioPlayer *_backgroundMusicPlayer = nil;
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"soundOff"]) {
     
-        [target runAction:[SKAction playSoundFileNamed:[NSString stringWithFormat:@"%@%@", filename, @".wav"] waitForCompletion:NO]];
+        [target runAction:[SKAction playSoundFileNamed:[NSString stringWithFormat:@"%@.wav", filename] waitForCompletion:NO]];
     }
 }
 
@@ -30,11 +30,15 @@ static AVAudioPlayer *_backgroundMusicPlayer = nil;
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"musicOff"]) {
         
         NSError *error;
-        NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:filename withExtension:@"wav"];
+        NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:filename withExtension:@"aac"];
         _backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
         _backgroundMusicPlayer.numberOfLoops = -1;
         [_backgroundMusicPlayer prepareToPlay];
         [_backgroundMusicPlayer play];
+    }
+    else {
+        
+        [_backgroundMusicPlayer stop];
     }
 }
 

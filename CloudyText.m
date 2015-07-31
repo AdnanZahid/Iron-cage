@@ -17,20 +17,18 @@ int duration = 5;
     if (self = [super init]) {
         
         _text = [[[Text alloc] initWithStringAndXandY:string X:scene.frame.size.width/2 Y:scene.frame.size.height/2] text];
+        _text.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         _text.fontSize = 20;
-        _text.position = CGPointMake(_text.position.x - _text.fontSize * 20, _text.position.y);
         _text.fontName = @"Chalkduster";
         
         SKAction *zoomOutAction = [SKAction scaleBy:8 duration:duration * 2];
         SKAction *fadeOutAction = [SKAction fadeOutWithDuration:duration];
         
-//        scene.paused = YES;
         *gameOver = !*gameOver;
     
         [_text runAction:zoomOutAction];
         [_text runAction:fadeOutAction completion:^{
                                                     [_text removeFromParent];
-//                                                    scene.paused = NO;
                                                     *gameOver = !*gameOver;
         }];
     }

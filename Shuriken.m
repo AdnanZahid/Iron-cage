@@ -10,9 +10,27 @@
 
 @implementation Shuriken
 
+static SKSpriteNode *_sprite = nil;
+
 + (SKSpriteNode *)sharedInstance {
     
-    static SKSpriteNode *_sprite = nil;
+    _sprite = [SKSpriteNode spriteNodeWithImageNamed:@"shuriken"];
+    
+    _sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_sprite.size.width];
+    _sprite.physicsBody.dynamic = NO;
+    
+    _sprite.physicsBody.categoryBitMask = SHURIKENCATEGORY;
+    _sprite.physicsBody.contactTestBitMask = OBSTACLECATEGORY;
+    _sprite.physicsBody.collisionBitMask = OBSTACLECATEGORY;
+    
+    SKAction *oneRevolution = [SKAction rotateByAngle: -M_PI*2 duration: 0.25f];
+    SKAction *repeat = [SKAction repeatActionForever:oneRevolution];
+    [_sprite runAction:repeat];
+    
+    return _sprite;
+}
+
++ (SKSpriteNode *)sharedInstanceOnce {
     
     static dispatch_once_t oncePredicate;
     

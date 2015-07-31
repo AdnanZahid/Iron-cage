@@ -30,11 +30,7 @@ NSString *const LocalPlayerIsAuthenticated = @"local_player_authenticated";
     GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:LEADERBOARDIDENTIFIER];
     score.value = gems;
     
-    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
-        if (error != nil) {
-            NSLog(@"%@", [error localizedDescription]);
-        }
-    }];
+    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {}];
 }
 
 - (void)authenticateLocalPlayer {
@@ -51,8 +47,6 @@ NSString *const LocalPlayerIsAuthenticated = @"local_player_authenticated";
     localPlayer.authenticateHandler = ^(NSViewController *viewController, NSError *error) {
 #endif
         
-        [self setLastError:error];
-        
         if(viewController != nil) {
             
             [self setAuthenticationViewController:viewController];
@@ -68,40 +62,52 @@ NSString *const LocalPlayerIsAuthenticated = @"local_player_authenticated";
 }
     
 #if TARGET_OS_IPHONE
--(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(UIViewController *)viewController {
-#else
--(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(NSViewController *)viewController {
-#endif
-    GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
-    
-    gcViewController.gameCenterDelegate = self;
-    
-    if (shouldShowLeaderboard) {
-        gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+    - (void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(UIViewController *)viewController {
         
-        gcViewController.leaderboardIdentifier = LEADERBOARDIDENTIFIER;
-    }
-    else{
-        gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
+        GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
+        
+        gcViewController.gameCenterDelegate = self;
+        
+        if (shouldShowLeaderboard) {
+            gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+            
+            gcViewController.leaderboardIdentifier = LEADERBOARDIDENTIFIER;
+        }
+        else{
+            gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
+        }
+        [viewController presentViewController:gcViewController animated:YES completion:nil];
     }
     
-#if TARGET_OS_IPHONE
-    [viewController presentViewController:gcViewController animated:YES completion:nil];
+    -(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+        
+        [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+    }
 #else
-    [viewController presentViewControllerAsSheet:gcViewController];
-#endif
-}
-
-- (void)setLastError:(NSError *)error {
-    _lastError = [error copy];
-    if (_lastError) {
-        NSLog(@"GameKitHelper ERROR: %@",
-              [[_lastError userInfo] description]);
+    - (void)showLeaderboard:(NSWindow *)window {
+        
+        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+        
+        if (gameCenterController != nil) {
+            gameCenterController.gameCenterDelegate = self;
+            gameCenterController.viewState = GKGameCenterViewControllerStateLeaderboards;
+            gameCenterController.leaderboardTimeScope = GKLeaderboardTimeScopeToday;
+            gameCenterController.leaderboardCategory = LEADERBOARDIDENTIFIER;
+            GKDialogController *sdc = [GKDialogController sharedDialogController];
+            sdc.parentWindow = window;
+            [sdc presentViewController: gameCenterController];
+        }
     }
-}
+    
+    - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+        
+        GKDialogController *sdc = [GKDialogController sharedDialogController];
+        [sdc dismiss: self];
+    }
+#endif
     
 #if TARGET_OS_IPHONE
-- (void)setAuthenticationViewController:(UIViewController *)authenticationViewController {
+    - (void)setAuthenticationViewController:(UIViewController *)authenticationViewController {
 #else
     - (void)setAuthenticationViewController:(NSViewController *)authenticationViewController {
 #endif
@@ -113,15 +119,6 @@ NSString *const LocalPlayerIsAuthenticated = @"local_player_authenticated";
          object:self];
     }
     
-}
-
--(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
-    
-#if TARGET_OS_IPHONE
-    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
-#else
-    [gameCenterViewController dismissViewController:_authenticationViewController];
-#endif
 }
 
 @end

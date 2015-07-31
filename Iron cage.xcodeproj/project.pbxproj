@@ -7,10 +7,119 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E62917961B452C32004701DC /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E62917951B452C32004701DC /* icon.icns */; };
 		E629179B1B453E11004701DC /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E629179A1B453E11004701DC /* GoogleMobileAds.framework */; };
+		E63BCB6E1B48743300FA7976 /* MainMenuScene.aac in Resources */ = {isa = PBXBuildFile; fileRef = E63BCB6B1B48743300FA7976 /* MainMenuScene.aac */; };
+		E63BCB6F1B48743300FA7976 /* MainMenuScene.aac in Resources */ = {isa = PBXBuildFile; fileRef = E63BCB6B1B48743300FA7976 /* MainMenuScene.aac */; };
+		E63E92EE1B49F2E7006E4B8F /* blood1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD01B4045DD0063EFF4 /* blood1.atlas */; };
+		E63E92EF1B49F2E7006E4B8F /* blood2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD11B4045DD0063EFF4 /* blood2.atlas */; };
+		E63E92F01B49F2E7006E4B8F /* blood3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD21B4045DD0063EFF4 /* blood3.atlas */; };
+		E63E92F11B49F2E7006E4B8F /* blood4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD31B4045DD0063EFF4 /* blood4.atlas */; };
+		E63E92F21B49F2E7006E4B8F /* drill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDF1B4045DD0063EFF4 /* drill.atlas */; };
+		E63E92F31B49F2E7006E4B8F /* enemy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD41B4045DD0063EFF4 /* enemy.atlas */; };
+		E63E92F41B49F2E7006E4B8F /* gear.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FE01B4045DD0063EFF4 /* gear.atlas */; };
+		E63E92F51B49F2E7006E4B8F /* hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD71B4045DD0063EFF4 /* hero.atlas */; };
+		E63E92F61B49F2E7006E4B8F /* shield.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDC1B4045DD0063EFF4 /* shield.atlas */; };
+		E63E92F71B49F2E9006E4B8F /* blood1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD01B4045DD0063EFF4 /* blood1.atlas */; };
+		E63E92F81B49F2E9006E4B8F /* blood2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD11B4045DD0063EFF4 /* blood2.atlas */; };
+		E63E92F91B49F2E9006E4B8F /* blood3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD21B4045DD0063EFF4 /* blood3.atlas */; };
+		E63E92FA1B49F2E9006E4B8F /* blood4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD31B4045DD0063EFF4 /* blood4.atlas */; };
+		E63E92FB1B49F2E9006E4B8F /* drill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDF1B4045DD0063EFF4 /* drill.atlas */; };
+		E63E92FC1B49F2E9006E4B8F /* enemy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD41B4045DD0063EFF4 /* enemy.atlas */; };
+		E63E92FD1B49F2E9006E4B8F /* gear.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FE01B4045DD0063EFF4 /* gear.atlas */; };
+		E63E92FE1B49F2E9006E4B8F /* hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD71B4045DD0063EFF4 /* hero.atlas */; };
+		E63E92FF1B49F2E9006E4B8F /* shield.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDC1B4045DD0063EFF4 /* shield.atlas */; };
+		E63E932C1B49F771006E4B8F /* Back.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93011B49F771006E4B8F /* Back.wav */; };
+		E63E932D1B49F771006E4B8F /* Back.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93011B49F771006E4B8F /* Back.wav */; };
+		E63E932E1B49F771006E4B8F /* Blood.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93021B49F771006E4B8F /* Blood.wav */; };
+		E63E932F1B49F771006E4B8F /* Blood.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93021B49F771006E4B8F /* Blood.wav */; };
+		E63E93301B49F771006E4B8F /* Chain.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93031B49F771006E4B8F /* Chain.wav */; };
+		E63E93311B49F771006E4B8F /* Chain.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93031B49F771006E4B8F /* Chain.wav */; };
+		E63E93321B49F771006E4B8F /* Checkbox.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93041B49F771006E4B8F /* Checkbox.wav */; };
+		E63E93331B49F771006E4B8F /* Checkbox.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93041B49F771006E4B8F /* Checkbox.wav */; };
+		E63E93341B49F771006E4B8F /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93051B49F771006E4B8F /* Click.wav */; };
+		E63E93351B49F771006E4B8F /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93051B49F771006E4B8F /* Click.wav */; };
+		E63E93361B49F771006E4B8F /* Died1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93061B49F771006E4B8F /* Died1.wav */; };
+		E63E93371B49F771006E4B8F /* Died1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93061B49F771006E4B8F /* Died1.wav */; };
+		E63E93381B49F771006E4B8F /* Died2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93071B49F771006E4B8F /* Died2.wav */; };
+		E63E93391B49F771006E4B8F /* Died2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93071B49F771006E4B8F /* Died2.wav */; };
+		E63E933A1B49F771006E4B8F /* Died3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93081B49F771006E4B8F /* Died3.wav */; };
+		E63E933B1B49F771006E4B8F /* Died3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93081B49F771006E4B8F /* Died3.wav */; };
+		E63E933C1B49F771006E4B8F /* Died4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93091B49F771006E4B8F /* Died4.wav */; };
+		E63E933D1B49F771006E4B8F /* Died4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93091B49F771006E4B8F /* Died4.wav */; };
+		E63E933E1B49F771006E4B8F /* Died5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930A1B49F771006E4B8F /* Died5.wav */; };
+		E63E933F1B49F771006E4B8F /* Died5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930A1B49F771006E4B8F /* Died5.wav */; };
+		E63E93401B49F771006E4B8F /* Died6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930B1B49F771006E4B8F /* Died6.wav */; };
+		E63E93411B49F771006E4B8F /* Died6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930B1B49F771006E4B8F /* Died6.wav */; };
+		E63E93421B49F771006E4B8F /* Drill.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930C1B49F771006E4B8F /* Drill.wav */; };
+		E63E93431B49F771006E4B8F /* Drill.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930C1B49F771006E4B8F /* Drill.wav */; };
+		E63E93441B49F771006E4B8F /* Enemy.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930D1B49F771006E4B8F /* Enemy.wav */; };
+		E63E93451B49F771006E4B8F /* Enemy.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930D1B49F771006E4B8F /* Enemy.wav */; };
+		E63E93461B49F771006E4B8F /* FadeOut.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930E1B49F771006E4B8F /* FadeOut.wav */; };
+		E63E93471B49F771006E4B8F /* FadeOut.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930E1B49F771006E4B8F /* FadeOut.wav */; };
+		E63E93481B49F771006E4B8F /* Gear.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930F1B49F771006E4B8F /* Gear.wav */; };
+		E63E93491B49F771006E4B8F /* Gear.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E930F1B49F771006E4B8F /* Gear.wav */; };
+		E63E934A1B49F771006E4B8F /* Gem.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93101B49F771006E4B8F /* Gem.wav */; };
+		E63E934B1B49F771006E4B8F /* Gem.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93101B49F771006E4B8F /* Gem.wav */; };
+		E63E934C1B49F771006E4B8F /* Highscore.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93111B49F771006E4B8F /* Highscore.wav */; };
+		E63E934D1B49F771006E4B8F /* Highscore.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93111B49F771006E4B8F /* Highscore.wav */; };
+		E63E934E1B49F771006E4B8F /* Hook.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93121B49F771006E4B8F /* Hook.wav */; };
+		E63E934F1B49F771006E4B8F /* Hook.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93121B49F771006E4B8F /* Hook.wav */; };
+		E63E93501B49F771006E4B8F /* Hurt1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93131B49F771006E4B8F /* Hurt1.wav */; };
+		E63E93511B49F771006E4B8F /* Hurt1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93131B49F771006E4B8F /* Hurt1.wav */; };
+		E63E93521B49F771006E4B8F /* Hurt2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93141B49F771006E4B8F /* Hurt2.wav */; };
+		E63E93531B49F771006E4B8F /* Hurt2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93141B49F771006E4B8F /* Hurt2.wav */; };
+		E63E93541B49F771006E4B8F /* Hurt3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93151B49F771006E4B8F /* Hurt3.wav */; };
+		E63E93551B49F771006E4B8F /* Hurt3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93151B49F771006E4B8F /* Hurt3.wav */; };
+		E63E93561B49F771006E4B8F /* Hurt4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93161B49F771006E4B8F /* Hurt4.wav */; };
+		E63E93571B49F771006E4B8F /* Hurt4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93161B49F771006E4B8F /* Hurt4.wav */; };
+		E63E93581B49F771006E4B8F /* Hurt5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93171B49F771006E4B8F /* Hurt5.wav */; };
+		E63E93591B49F771006E4B8F /* Hurt5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93171B49F771006E4B8F /* Hurt5.wav */; };
+		E63E935A1B49F771006E4B8F /* Hurt6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93181B49F771006E4B8F /* Hurt6.wav */; };
+		E63E935B1B49F771006E4B8F /* Hurt6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93181B49F771006E4B8F /* Hurt6.wav */; };
+		E63E935C1B49F771006E4B8F /* Hurt7.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93191B49F771006E4B8F /* Hurt7.wav */; };
+		E63E935D1B49F771006E4B8F /* Hurt7.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93191B49F771006E4B8F /* Hurt7.wav */; };
+		E63E935E1B49F771006E4B8F /* Hurt8.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931A1B49F771006E4B8F /* Hurt8.wav */; };
+		E63E935F1B49F771006E4B8F /* Hurt8.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931A1B49F771006E4B8F /* Hurt8.wav */; };
+		E63E93601B49F771006E4B8F /* Hurt9.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931B1B49F771006E4B8F /* Hurt9.wav */; };
+		E63E93611B49F771006E4B8F /* Hurt9.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931B1B49F771006E4B8F /* Hurt9.wav */; };
+		E63E93621B49F771006E4B8F /* Hurt10.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931C1B49F771006E4B8F /* Hurt10.wav */; };
+		E63E93631B49F771006E4B8F /* Hurt10.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931C1B49F771006E4B8F /* Hurt10.wav */; };
+		E63E93641B49F771006E4B8F /* Hurt11.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931D1B49F771006E4B8F /* Hurt11.wav */; };
+		E63E93651B49F771006E4B8F /* Hurt11.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931D1B49F771006E4B8F /* Hurt11.wav */; };
+		E63E93661B49F771006E4B8F /* Hurt12.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931E1B49F771006E4B8F /* Hurt12.wav */; };
+		E63E93671B49F771006E4B8F /* Hurt12.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931E1B49F771006E4B8F /* Hurt12.wav */; };
+		E63E93681B49F771006E4B8F /* Jump1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931F1B49F771006E4B8F /* Jump1.wav */; };
+		E63E93691B49F771006E4B8F /* Jump1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E931F1B49F771006E4B8F /* Jump1.wav */; };
+		E63E936A1B49F771006E4B8F /* Jump2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93201B49F771006E4B8F /* Jump2.wav */; };
+		E63E936B1B49F771006E4B8F /* Jump2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93201B49F771006E4B8F /* Jump2.wav */; };
+		E63E936C1B49F771006E4B8F /* Jump3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93211B49F771006E4B8F /* Jump3.wav */; };
+		E63E936D1B49F771006E4B8F /* Jump3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93211B49F771006E4B8F /* Jump3.wav */; };
+		E63E936E1B49F771006E4B8F /* Jump4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93221B49F771006E4B8F /* Jump4.wav */; };
+		E63E936F1B49F771006E4B8F /* Jump4.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93221B49F771006E4B8F /* Jump4.wav */; };
+		E63E93701B49F771006E4B8F /* Jump5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93231B49F771006E4B8F /* Jump5.wav */; };
+		E63E93711B49F771006E4B8F /* Jump5.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93231B49F771006E4B8F /* Jump5.wav */; };
+		E63E93721B49F771006E4B8F /* Jump6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93241B49F771006E4B8F /* Jump6.wav */; };
+		E63E93731B49F771006E4B8F /* Jump6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93241B49F771006E4B8F /* Jump6.wav */; };
+		E63E93741B49F771006E4B8F /* Jump7.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93251B49F771006E4B8F /* Jump7.wav */; };
+		E63E93751B49F771006E4B8F /* Jump7.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93251B49F771006E4B8F /* Jump7.wav */; };
+		E63E93761B49F771006E4B8F /* Jump8.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93261B49F771006E4B8F /* Jump8.wav */; };
+		E63E93771B49F771006E4B8F /* Jump8.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93261B49F771006E4B8F /* Jump8.wav */; };
+		E63E93781B49F771006E4B8F /* Painkiller.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93271B49F771006E4B8F /* Painkiller.wav */; };
+		E63E93791B49F771006E4B8F /* Painkiller.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93271B49F771006E4B8F /* Painkiller.wav */; };
+		E63E937A1B49F771006E4B8F /* PrisonDoor.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93281B49F771006E4B8F /* PrisonDoor.wav */; };
+		E63E937B1B49F771006E4B8F /* PrisonDoor.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93281B49F771006E4B8F /* PrisonDoor.wav */; };
+		E63E937C1B49F771006E4B8F /* ShieldTaken.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93291B49F771006E4B8F /* ShieldTaken.wav */; };
+		E63E937D1B49F771006E4B8F /* ShieldTaken.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E93291B49F771006E4B8F /* ShieldTaken.wav */; };
+		E63E937E1B49F771006E4B8F /* Shuriken.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E932A1B49F771006E4B8F /* Shuriken.wav */; };
+		E63E937F1B49F771006E4B8F /* Shuriken.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E932A1B49F771006E4B8F /* Shuriken.wav */; };
+		E63E93801B49F771006E4B8F /* Walk.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E932B1B49F771006E4B8F /* Walk.wav */; };
+		E63E93811B49F771006E4B8F /* Walk.wav in Resources */ = {isa = PBXBuildFile; fileRef = E63E932B1B49F771006E4B8F /* Walk.wav */; };
+		E64FB18D1B55756200C15404 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64FB18C1B55756200C15404 /* GameKit.framework */; };
+		E65317861B49B2EB00A1016D /* ironcage.icns in Resources */ = {isa = PBXBuildFile; fileRef = E65317841B49B2EB00A1016D /* ironcage.icns */; };
 		E673DDB81B429A13002A54F3 /* iRate.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = E673DDB71B429A13002A54F3 /* iRate.bundle */; };
 		E673DDB91B429A15002A54F3 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E673DDB71B429A13002A54F3 /* iRate.bundle */; };
+		E688C9E11B49EDA4008E0F10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6966FAA1B4045DD0063EFF4 /* Images.xcassets */; };
+		E688C9E21B49EDA6008E0F10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6966FAA1B4045DD0063EFF4 /* Images.xcassets */; };
 		E6966F321B4045480063EFF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6966F311B4045480063EFF4 /* main.m */; };
 		E6966F401B4045480063EFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6966F3E1B4045480063EFF4 /* Main.storyboard */; };
 		E6966F451B4045480063EFF4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6966F431B4045480063EFF4 /* LaunchScreen.xib */; };
@@ -92,47 +201,73 @@
 		E696702A1B4045DD0063EFF4 /* SpriteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E6966FA81B4045DD0063EFF4 /* SpriteFactory.m */; };
 		E696702B1B4045DD0063EFF4 /* Text.m in Sources */ = {isa = PBXBuildFile; fileRef = E6966FA91B4045DD0063EFF4 /* Text.m */; };
 		E696702C1B4045DD0063EFF4 /* Text.m in Sources */ = {isa = PBXBuildFile; fileRef = E6966FA91B4045DD0063EFF4 /* Text.m */; };
-		E696702D1B4045DD0063EFF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6966FAA1B4045DD0063EFF4 /* Images.xcassets */; };
-		E696702E1B4045DD0063EFF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6966FAA1B4045DD0063EFF4 /* Images.xcassets */; };
-		E69670311B4045DD0063EFF4 /* blood1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD01B4045DD0063EFF4 /* blood1.atlas */; };
-		E69670321B4045DD0063EFF4 /* blood1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD01B4045DD0063EFF4 /* blood1.atlas */; };
-		E69670331B4045DD0063EFF4 /* blood2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD11B4045DD0063EFF4 /* blood2.atlas */; };
-		E69670341B4045DD0063EFF4 /* blood2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD11B4045DD0063EFF4 /* blood2.atlas */; };
-		E69670351B4045DD0063EFF4 /* blood3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD21B4045DD0063EFF4 /* blood3.atlas */; };
-		E69670361B4045DD0063EFF4 /* blood3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD21B4045DD0063EFF4 /* blood3.atlas */; };
-		E69670371B4045DD0063EFF4 /* blood4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD31B4045DD0063EFF4 /* blood4.atlas */; };
-		E69670381B4045DD0063EFF4 /* blood4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD31B4045DD0063EFF4 /* blood4.atlas */; };
-		E69670391B4045DD0063EFF4 /* enemy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD41B4045DD0063EFF4 /* enemy.atlas */; };
-		E696703A1B4045DD0063EFF4 /* enemy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD41B4045DD0063EFF4 /* enemy.atlas */; };
-		E696703F1B4045DD0063EFF4 /* hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD71B4045DD0063EFF4 /* hero.atlas */; };
-		E69670401B4045DD0063EFF4 /* hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FD71B4045DD0063EFF4 /* hero.atlas */; };
-		E69670491B4045DD0063EFF4 /* shield.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDC1B4045DD0063EFF4 /* shield.atlas */; };
-		E696704A1B4045DD0063EFF4 /* shield.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDC1B4045DD0063EFF4 /* shield.atlas */; };
-		E696704F1B4045DD0063EFF4 /* drill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDF1B4045DD0063EFF4 /* drill.atlas */; };
-		E69670501B4045DD0063EFF4 /* drill.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FDF1B4045DD0063EFF4 /* drill.atlas */; };
-		E69670511B4045DD0063EFF4 /* gear.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FE01B4045DD0063EFF4 /* gear.atlas */; };
-		E69670521B4045DD0063EFF4 /* gear.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E6966FE01B4045DD0063EFF4 /* gear.atlas */; };
 		E69670631B40488B0063EFF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E696705F1B40488B0063EFF4 /* AppDelegate.m */; };
 		E69670641B40488B0063EFF4 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69670601B40488B0063EFF4 /* GameViewController.m */; };
 		E69670671B4048AB0063EFF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E69670651B4048AB0063EFF4 /* AppDelegate.m */; };
+		E69A52BD1B4A76B100ADE19E /* GameScene.aac in Resources */ = {isa = PBXBuildFile; fileRef = E69A52BC1B4A76B100ADE19E /* GameScene.aac */; };
+		E69A52BE1B4A76B100ADE19E /* GameScene.aac in Resources */ = {isa = PBXBuildFile; fileRef = E69A52BC1B4A76B100ADE19E /* GameScene.aac */; };
+		E6A186C61B4A9E3200B892AC /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A186C51B4A9E3200B892AC /* GameKit.framework */; };
 		E6A24A061B43D34400F01310 /* AudioFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A24A051B43D34400F01310 /* AudioFactory.m */; };
 		E6A24A071B43D34400F01310 /* AudioFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A24A051B43D34400F01310 /* AudioFactory.m */; };
-		E6A24AAA1B43D77C00F01310 /* GameScene.wav in Resources */ = {isa = PBXBuildFile; fileRef = E6A24AA91B43D77C00F01310 /* GameScene.wav */; };
-		E6A24AAB1B43D77C00F01310 /* GameScene.wav in Resources */ = {isa = PBXBuildFile; fileRef = E6A24AA91B43D77C00F01310 /* GameScene.wav */; };
 		E6EC49721B412D5300853BFA /* CloudyText.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC49711B412D5300853BFA /* CloudyText.m */; };
 		E6EC49731B412D5300853BFA /* CloudyText.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC49711B412D5300853BFA /* CloudyText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E62917951B452C32004701DC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		E629179A1B453E11004701DC /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		E63BCB6B1B48743300FA7976 /* MainMenuScene.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMenuScene.aac; sourceTree = "<group>"; };
+		E63E93011B49F771006E4B8F /* Back.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Back.wav; sourceTree = "<group>"; };
+		E63E93021B49F771006E4B8F /* Blood.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Blood.wav; sourceTree = "<group>"; };
+		E63E93031B49F771006E4B8F /* Chain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chain.wav; sourceTree = "<group>"; };
+		E63E93041B49F771006E4B8F /* Checkbox.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Checkbox.wav; sourceTree = "<group>"; };
+		E63E93051B49F771006E4B8F /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
+		E63E93061B49F771006E4B8F /* Died1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died1.wav; sourceTree = "<group>"; };
+		E63E93071B49F771006E4B8F /* Died2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died2.wav; sourceTree = "<group>"; };
+		E63E93081B49F771006E4B8F /* Died3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died3.wav; sourceTree = "<group>"; };
+		E63E93091B49F771006E4B8F /* Died4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died4.wav; sourceTree = "<group>"; };
+		E63E930A1B49F771006E4B8F /* Died5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died5.wav; sourceTree = "<group>"; };
+		E63E930B1B49F771006E4B8F /* Died6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Died6.wav; sourceTree = "<group>"; };
+		E63E930C1B49F771006E4B8F /* Drill.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Drill.wav; sourceTree = "<group>"; };
+		E63E930D1B49F771006E4B8F /* Enemy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Enemy.wav; sourceTree = "<group>"; };
+		E63E930E1B49F771006E4B8F /* FadeOut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FadeOut.wav; sourceTree = "<group>"; };
+		E63E930F1B49F771006E4B8F /* Gear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Gear.wav; sourceTree = "<group>"; };
+		E63E93101B49F771006E4B8F /* Gem.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Gem.wav; sourceTree = "<group>"; };
+		E63E93111B49F771006E4B8F /* Highscore.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Highscore.wav; sourceTree = "<group>"; };
+		E63E93121B49F771006E4B8F /* Hook.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hook.wav; sourceTree = "<group>"; };
+		E63E93131B49F771006E4B8F /* Hurt1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt1.wav; sourceTree = "<group>"; };
+		E63E93141B49F771006E4B8F /* Hurt2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt2.wav; sourceTree = "<group>"; };
+		E63E93151B49F771006E4B8F /* Hurt3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt3.wav; sourceTree = "<group>"; };
+		E63E93161B49F771006E4B8F /* Hurt4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt4.wav; sourceTree = "<group>"; };
+		E63E93171B49F771006E4B8F /* Hurt5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt5.wav; sourceTree = "<group>"; };
+		E63E93181B49F771006E4B8F /* Hurt6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt6.wav; sourceTree = "<group>"; };
+		E63E93191B49F771006E4B8F /* Hurt7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt7.wav; sourceTree = "<group>"; };
+		E63E931A1B49F771006E4B8F /* Hurt8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt8.wav; sourceTree = "<group>"; };
+		E63E931B1B49F771006E4B8F /* Hurt9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt9.wav; sourceTree = "<group>"; };
+		E63E931C1B49F771006E4B8F /* Hurt10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt10.wav; sourceTree = "<group>"; };
+		E63E931D1B49F771006E4B8F /* Hurt11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt11.wav; sourceTree = "<group>"; };
+		E63E931E1B49F771006E4B8F /* Hurt12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hurt12.wav; sourceTree = "<group>"; };
+		E63E931F1B49F771006E4B8F /* Jump1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump1.wav; sourceTree = "<group>"; };
+		E63E93201B49F771006E4B8F /* Jump2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump2.wav; sourceTree = "<group>"; };
+		E63E93211B49F771006E4B8F /* Jump3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump3.wav; sourceTree = "<group>"; };
+		E63E93221B49F771006E4B8F /* Jump4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump4.wav; sourceTree = "<group>"; };
+		E63E93231B49F771006E4B8F /* Jump5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump5.wav; sourceTree = "<group>"; };
+		E63E93241B49F771006E4B8F /* Jump6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump6.wav; sourceTree = "<group>"; };
+		E63E93251B49F771006E4B8F /* Jump7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump7.wav; sourceTree = "<group>"; };
+		E63E93261B49F771006E4B8F /* Jump8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump8.wav; sourceTree = "<group>"; };
+		E63E93271B49F771006E4B8F /* Painkiller.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Painkiller.wav; sourceTree = "<group>"; };
+		E63E93281B49F771006E4B8F /* PrisonDoor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PrisonDoor.wav; sourceTree = "<group>"; };
+		E63E93291B49F771006E4B8F /* ShieldTaken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ShieldTaken.wav; sourceTree = "<group>"; };
+		E63E932A1B49F771006E4B8F /* Shuriken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shuriken.wav; sourceTree = "<group>"; };
+		E63E932B1B49F771006E4B8F /* Walk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Walk.wav; sourceTree = "<group>"; };
+		E64FB18C1B55756200C15404 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		E65317841B49B2EB00A1016D /* ironcage.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ironcage.icns; sourceTree = "<group>"; };
 		E673DDB71B429A13002A54F3 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		E6966F2C1B4045480063EFF4 /* Iron cage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iron cage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6966F301B4045480063EFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6966F311B4045480063EFF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6966F3F1B4045480063EFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6966F441B4045480063EFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E6966F5E1B4045660063EFF4 /* Iron cage mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iron cage mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6966F5E1B4045660063EFF4 /* Iron Cage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iron Cage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6966F611B4045660063EFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6966F651B4045660063EFF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6966F6F1B4045660063EFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -226,9 +361,11 @@
 		E69670621B40488B0063EFF4 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		E69670651B4048AB0063EFF4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E69670661B4048AB0063EFF4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E69A52BC1B4A76B100ADE19E /* GameScene.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameScene.aac; sourceTree = "<group>"; };
+		E6A186C41B4A9D1200B892AC /* Iron cage mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Iron cage mac.entitlements"; sourceTree = "<group>"; };
+		E6A186C51B4A9E3200B892AC /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E6A24A041B43D34400F01310 /* AudioFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFactory.h; sourceTree = "<group>"; };
 		E6A24A051B43D34400F01310 /* AudioFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFactory.m; sourceTree = "<group>"; };
-		E6A24AA91B43D77C00F01310 /* GameScene.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameScene.wav; sourceTree = "<group>"; };
 		E6EC49701B412D5300853BFA /* CloudyText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudyText.h; sourceTree = "<group>"; };
 		E6EC49711B412D5300853BFA /* CloudyText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudyText.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +375,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A186C61B4A9E3200B892AC /* GameKit.framework in Frameworks */,
 				E629179B1B453E11004701DC /* GoogleMobileAds.framework in Frameworks */,
 				E673DDB81B429A13002A54F3 /* iRate.bundle in Frameworks */,
 			);
@@ -247,20 +385,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64FB18D1B55756200C15404 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E63E93001B49F764006E4B8F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E69A52BB1B4A5E6400ADE19E /* Jump */,
+				E69A52BA1B4A5E5500ADE19E /* Hurt */,
+				E6EAFDF61B49DD8400FBC43F /* Background music */,
+				E69A52B91B4A5E0900ADE19E /* Died */,
+				E63E93011B49F771006E4B8F /* Back.wav */,
+				E63E93021B49F771006E4B8F /* Blood.wav */,
+				E63E93031B49F771006E4B8F /* Chain.wav */,
+				E63E93041B49F771006E4B8F /* Checkbox.wav */,
+				E63E93051B49F771006E4B8F /* Click.wav */,
+				E63E930C1B49F771006E4B8F /* Drill.wav */,
+				E63E930D1B49F771006E4B8F /* Enemy.wav */,
+				E63E930E1B49F771006E4B8F /* FadeOut.wav */,
+				E63E930F1B49F771006E4B8F /* Gear.wav */,
+				E63E93101B49F771006E4B8F /* Gem.wav */,
+				E63E93111B49F771006E4B8F /* Highscore.wav */,
+				E63E93121B49F771006E4B8F /* Hook.wav */,
+				E63E93271B49F771006E4B8F /* Painkiller.wav */,
+				E63E93281B49F771006E4B8F /* PrisonDoor.wav */,
+				E63E93291B49F771006E4B8F /* ShieldTaken.wav */,
+				E63E932A1B49F771006E4B8F /* Shuriken.wav */,
+				E63E932B1B49F771006E4B8F /* Walk.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		E6966F231B4045480063EFF4 = {
 			isa = PBXGroup;
 			children = (
+				E64FB18C1B55756200C15404 /* GameKit.framework */,
+				E6A186C51B4A9E3200B892AC /* GameKit.framework */,
 				E629179A1B453E11004701DC /* GoogleMobileAds.framework */,
 				E673DDB71B429A13002A54F3 /* iRate.bundle */,
 				E6966F831B4045A00063EFF4 /* Shared resources */,
 				E6966F2E1B4045480063EFF4 /* Iron cage */,
-				E6966F5F1B4045660063EFF4 /* Iron cage mac */,
+				E6966F5F1B4045660063EFF4 /* Iron Cage */,
 				E6966F2D1B4045480063EFF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -269,7 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				E6966F2C1B4045480063EFF4 /* Iron cage.app */,
-				E6966F5E1B4045660063EFF4 /* Iron cage mac.app */,
+				E6966F5E1B4045660063EFF4 /* Iron Cage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,20 +466,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E6966F5F1B4045660063EFF4 /* Iron cage mac */ = {
+		E6966F5F1B4045660063EFF4 /* Iron Cage */ = {
 			isa = PBXGroup;
 			children = (
+				E6A186C41B4A9D1200B892AC /* Iron cage mac.entitlements */,
 				E69670661B4048AB0063EFF4 /* AppDelegate.h */,
 				E69670651B4048AB0063EFF4 /* AppDelegate.m */,
 				E6966F601B4045660063EFF4 /* Supporting Files */,
 			);
+			name = "Iron Cage";
 			path = "Iron cage mac";
 			sourceTree = "<group>";
 		};
 		E6966F601B4045660063EFF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E62917951B452C32004701DC /* icon.icns */,
+				E65317841B49B2EB00A1016D /* ironcage.icns */,
 				E6966F611B4045660063EFF4 /* Info.plist */,
 				E6966F651B4045660063EFF4 /* main.m */,
 				E6966F6E1B4045660063EFF4 /* MainMenu.xib */,
@@ -327,7 +498,7 @@
 				E696705C1B40477B0063EFF4 /* Objects */,
 				E69670531B4045E80063EFF4 /* Particles */,
 				E69670551B4046530063EFF4 /* Scenes */,
-				E6A24A081B43D74E00F01310 /* Sounds */,
+				E63E93001B49F764006E4B8F /* Sounds */,
 				E69670541B4046210063EFF4 /* Texture atlases */,
 				E696705D1B4047DA0063EFF4 /* UI */,
 			);
@@ -510,12 +681,60 @@
 			name = Factories;
 			sourceTree = "<group>";
 		};
-		E6A24A081B43D74E00F01310 /* Sounds */ = {
+		E69A52B91B4A5E0900ADE19E /* Died */ = {
 			isa = PBXGroup;
 			children = (
-				E6A24AA91B43D77C00F01310 /* GameScene.wav */,
+				E63E93061B49F771006E4B8F /* Died1.wav */,
+				E63E93071B49F771006E4B8F /* Died2.wav */,
+				E63E93081B49F771006E4B8F /* Died3.wav */,
+				E63E93091B49F771006E4B8F /* Died4.wav */,
+				E63E930A1B49F771006E4B8F /* Died5.wav */,
+				E63E930B1B49F771006E4B8F /* Died6.wav */,
 			);
-			name = Sounds;
+			name = Died;
+			sourceTree = "<group>";
+		};
+		E69A52BA1B4A5E5500ADE19E /* Hurt */ = {
+			isa = PBXGroup;
+			children = (
+				E63E93131B49F771006E4B8F /* Hurt1.wav */,
+				E63E93141B49F771006E4B8F /* Hurt2.wav */,
+				E63E93151B49F771006E4B8F /* Hurt3.wav */,
+				E63E93161B49F771006E4B8F /* Hurt4.wav */,
+				E63E93171B49F771006E4B8F /* Hurt5.wav */,
+				E63E93181B49F771006E4B8F /* Hurt6.wav */,
+				E63E93191B49F771006E4B8F /* Hurt7.wav */,
+				E63E931A1B49F771006E4B8F /* Hurt8.wav */,
+				E63E931B1B49F771006E4B8F /* Hurt9.wav */,
+				E63E931C1B49F771006E4B8F /* Hurt10.wav */,
+				E63E931D1B49F771006E4B8F /* Hurt11.wav */,
+				E63E931E1B49F771006E4B8F /* Hurt12.wav */,
+			);
+			name = Hurt;
+			sourceTree = "<group>";
+		};
+		E69A52BB1B4A5E6400ADE19E /* Jump */ = {
+			isa = PBXGroup;
+			children = (
+				E63E931F1B49F771006E4B8F /* Jump1.wav */,
+				E63E93201B49F771006E4B8F /* Jump2.wav */,
+				E63E93211B49F771006E4B8F /* Jump3.wav */,
+				E63E93221B49F771006E4B8F /* Jump4.wav */,
+				E63E93231B49F771006E4B8F /* Jump5.wav */,
+				E63E93241B49F771006E4B8F /* Jump6.wav */,
+				E63E93251B49F771006E4B8F /* Jump7.wav */,
+				E63E93261B49F771006E4B8F /* Jump8.wav */,
+			);
+			name = Jump;
+			sourceTree = "<group>";
+		};
+		E6EAFDF61B49DD8400FBC43F /* Background music */ = {
+			isa = PBXGroup;
+			children = (
+				E69A52BC1B4A76B100ADE19E /* GameScene.aac */,
+				E63BCB6B1B48743300FA7976 /* MainMenuScene.aac */,
+			);
+			name = "Background music";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,9 +757,9 @@
 			productReference = E6966F2C1B4045480063EFF4 /* Iron cage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E6966F5D1B4045660063EFF4 /* Iron cage mac */ = {
+		E6966F5D1B4045660063EFF4 /* Iron Cage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6966F7D1B4045660063EFF4 /* Build configuration list for PBXNativeTarget "Iron cage mac" */;
+			buildConfigurationList = E6966F7D1B4045660063EFF4 /* Build configuration list for PBXNativeTarget "Iron Cage" */;
 			buildPhases = (
 				E6966F5A1B4045660063EFF4 /* Sources */,
 				E6966F5B1B4045660063EFF4 /* Frameworks */,
@@ -550,9 +769,9 @@
 			);
 			dependencies = (
 			);
-			name = "Iron cage mac";
+			name = "Iron Cage";
 			productName = "Iron cage mac";
-			productReference = E6966F5E1B4045660063EFF4 /* Iron cage mac.app */;
+			productReference = E6966F5E1B4045660063EFF4 /* Iron Cage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -561,14 +780,29 @@
 		E6966F241B4045480063EFF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Adnan Zahid";
 				TargetAttributes = {
 					E6966F2B1B4045480063EFF4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Q666HR669V;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					E6966F5D1B4045660063EFF4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Q666HR669V;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -587,7 +821,7 @@
 			projectRoot = "";
 			targets = (
 				E6966F2B1B4045480063EFF4 /* Iron cage */,
-				E6966F5D1B4045660063EFF4 /* Iron cage mac */,
+				E6966F5D1B4045660063EFF4 /* Iron Cage */,
 			);
 		};
 /* End PBXProject section */
@@ -597,23 +831,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69670351B4045DD0063EFF4 /* blood3.atlas in Resources */,
-				E696702D1B4045DD0063EFF4 /* Images.xcassets in Resources */,
-				E69670331B4045DD0063EFF4 /* blood2.atlas in Resources */,
+				E63E932E1B49F771006E4B8F /* Blood.wav in Resources */,
+				E63E93381B49F771006E4B8F /* Died2.wav in Resources */,
+				E688C9E11B49EDA4008E0F10 /* Images.xcassets in Resources */,
+				E63E93421B49F771006E4B8F /* Drill.wav in Resources */,
+				E63E93441B49F771006E4B8F /* Enemy.wav in Resources */,
+				E63E93501B49F771006E4B8F /* Hurt1.wav in Resources */,
 				E6966F451B4045480063EFF4 /* LaunchScreen.xib in Resources */,
-				E696704F1B4045DD0063EFF4 /* drill.atlas in Resources */,
+				E63E935E1B49F771006E4B8F /* Hurt8.wav in Resources */,
+				E63E93341B49F771006E4B8F /* Click.wav in Resources */,
+				E63E93601B49F771006E4B8F /* Hurt9.wav in Resources */,
+				E63E92F61B49F2E7006E4B8F /* shield.atlas in Resources */,
+				E63E93521B49F771006E4B8F /* Hurt2.wav in Resources */,
+				E63E93701B49F771006E4B8F /* Jump5.wav in Resources */,
+				E63E934C1B49F771006E4B8F /* Highscore.wav in Resources */,
+				E63E934E1B49F771006E4B8F /* Hook.wav in Resources */,
+				E63E92EF1B49F2E7006E4B8F /* blood2.atlas in Resources */,
 				E6966FE31B4045DD0063EFF4 /* explosion.sks in Resources */,
-				E69670491B4045DD0063EFF4 /* shield.atlas in Resources */,
+				E63E93321B49F771006E4B8F /* Checkbox.wav in Resources */,
+				E63E937E1B49F771006E4B8F /* Shuriken.wav in Resources */,
+				E63E936A1B49F771006E4B8F /* Jump2.wav in Resources */,
+				E63E93361B49F771006E4B8F /* Died1.wav in Resources */,
+				E63E93641B49F771006E4B8F /* Hurt11.wav in Resources */,
+				E63E93481B49F771006E4B8F /* Gear.wav in Resources */,
+				E63E936E1B49F771006E4B8F /* Jump4.wav in Resources */,
+				E63E93761B49F771006E4B8F /* Jump8.wav in Resources */,
+				E63E92F51B49F2E7006E4B8F /* hero.atlas in Resources */,
+				E63E937A1B49F771006E4B8F /* PrisonDoor.wav in Resources */,
+				E63E934A1B49F771006E4B8F /* Gem.wav in Resources */,
+				E63E92F21B49F2E7006E4B8F /* drill.atlas in Resources */,
 				E6966FE51B4045DD0063EFF4 /* gearSpark.sks in Resources */,
+				E63E935C1B49F771006E4B8F /* Hurt7.wav in Resources */,
+				E63E935A1B49F771006E4B8F /* Hurt6.wav in Resources */,
+				E63E92F31B49F2E7006E4B8F /* enemy.atlas in Resources */,
+				E63E92F41B49F2E7006E4B8F /* gear.atlas in Resources */,
 				E6966FE71B4045DD0063EFF4 /* spark.png in Resources */,
-				E69670511B4045DD0063EFF4 /* gear.atlas in Resources */,
-				E69670311B4045DD0063EFF4 /* blood1.atlas in Resources */,
-				E69670391B4045DD0063EFF4 /* enemy.atlas in Resources */,
-				E69670371B4045DD0063EFF4 /* blood4.atlas in Resources */,
-				E696703F1B4045DD0063EFF4 /* hero.atlas in Resources */,
-				E6A24AAA1B43D77C00F01310 /* GameScene.wav in Resources */,
+				E63E932C1B49F771006E4B8F /* Back.wav in Resources */,
+				E63E93801B49F771006E4B8F /* Walk.wav in Resources */,
+				E63E93661B49F771006E4B8F /* Hurt12.wav in Resources */,
+				E63E93461B49F771006E4B8F /* FadeOut.wav in Resources */,
+				E69A52BD1B4A76B100ADE19E /* GameScene.aac in Resources */,
+				E63E93401B49F771006E4B8F /* Died6.wav in Resources */,
+				E63E93681B49F771006E4B8F /* Jump1.wav in Resources */,
+				E63E93721B49F771006E4B8F /* Jump6.wav in Resources */,
+				E63BCB6E1B48743300FA7976 /* MainMenuScene.aac in Resources */,
+				E63E93301B49F771006E4B8F /* Chain.wav in Resources */,
+				E63E93741B49F771006E4B8F /* Jump7.wav in Resources */,
+				E63E92F01B49F2E7006E4B8F /* blood3.atlas in Resources */,
+				E63E936C1B49F771006E4B8F /* Jump3.wav in Resources */,
+				E63E93561B49F771006E4B8F /* Hurt4.wav in Resources */,
+				E63E93781B49F771006E4B8F /* Painkiller.wav in Resources */,
+				E63E933E1B49F771006E4B8F /* Died5.wav in Resources */,
+				E63E933A1B49F771006E4B8F /* Died3.wav in Resources */,
+				E63E933C1B49F771006E4B8F /* Died4.wav in Resources */,
+				E63E93581B49F771006E4B8F /* Hurt5.wav in Resources */,
 				E6966FE11B4045DD0063EFF4 /* drillSpark.sks in Resources */,
 				E6966F401B4045480063EFF4 /* Main.storyboard in Resources */,
+				E63E92F11B49F2E7006E4B8F /* blood4.atlas in Resources */,
+				E63E937C1B49F771006E4B8F /* ShieldTaken.wav in Resources */,
+				E63E93621B49F771006E4B8F /* Hurt10.wav in Resources */,
+				E63E93541B49F771006E4B8F /* Hurt3.wav in Resources */,
+				E63E92EE1B49F2E7006E4B8F /* blood1.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,24 +899,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E696702E1B4045DD0063EFF4 /* Images.xcassets in Resources */,
+				E63E93811B49F771006E4B8F /* Walk.wav in Resources */,
+				E63E93691B49F771006E4B8F /* Jump1.wav in Resources */,
 				E673DDB91B429A15002A54F3 /* iRate.bundle in Resources */,
 				E6966FE21B4045DD0063EFF4 /* drillSpark.sks in Resources */,
-				E69670401B4045DD0063EFF4 /* hero.atlas in Resources */,
+				E63E93411B49F771006E4B8F /* Died6.wav in Resources */,
+				E63E93371B49F771006E4B8F /* Died1.wav in Resources */,
+				E688C9E21B49EDA6008E0F10 /* Images.xcassets in Resources */,
+				E63E937F1B49F771006E4B8F /* Shuriken.wav in Resources */,
+				E63E93671B49F771006E4B8F /* Hurt12.wav in Resources */,
+				E65317861B49B2EB00A1016D /* ironcage.icns in Resources */,
+				E63E93351B49F771006E4B8F /* Click.wav in Resources */,
+				E63E92FF1B49F2E9006E4B8F /* shield.atlas in Resources */,
+				E63E93431B49F771006E4B8F /* Drill.wav in Resources */,
+				E63E93711B49F771006E4B8F /* Jump5.wav in Resources */,
+				E63E93451B49F771006E4B8F /* Enemy.wav in Resources */,
+				E63E937B1B49F771006E4B8F /* PrisonDoor.wav in Resources */,
 				E6966FE81B4045DD0063EFF4 /* spark.png in Resources */,
-				E69670341B4045DD0063EFF4 /* blood2.atlas in Resources */,
-				E69670521B4045DD0063EFF4 /* gear.atlas in Resources */,
-				E696703A1B4045DD0063EFF4 /* enemy.atlas in Resources */,
+				E63E934F1B49F771006E4B8F /* Hook.wav in Resources */,
+				E63E92F81B49F2E9006E4B8F /* blood2.atlas in Resources */,
+				E63E933D1B49F771006E4B8F /* Died4.wav in Resources */,
+				E63E93631B49F771006E4B8F /* Hurt10.wav in Resources */,
+				E63E92FE1B49F2E9006E4B8F /* hero.atlas in Resources */,
+				E63E92FB1B49F2E9006E4B8F /* drill.atlas in Resources */,
+				E63E93651B49F771006E4B8F /* Hurt11.wav in Resources */,
+				E63E93391B49F771006E4B8F /* Died2.wav in Resources */,
+				E63E92FC1B49F2E9006E4B8F /* enemy.atlas in Resources */,
+				E63E93531B49F771006E4B8F /* Hurt2.wav in Resources */,
+				E63E93551B49F771006E4B8F /* Hurt3.wav in Resources */,
+				E63E933F1B49F771006E4B8F /* Died5.wav in Resources */,
 				E6966FE41B4045DD0063EFF4 /* explosion.sks in Resources */,
-				E69670321B4045DD0063EFF4 /* blood1.atlas in Resources */,
+				E63E935F1B49F771006E4B8F /* Hurt8.wav in Resources */,
+				E63E92FD1B49F2E9006E4B8F /* gear.atlas in Resources */,
+				E63E935B1B49F771006E4B8F /* Hurt6.wav in Resources */,
+				E63E93771B49F771006E4B8F /* Jump8.wav in Resources */,
+				E63E932D1B49F771006E4B8F /* Back.wav in Resources */,
+				E63E936B1B49F771006E4B8F /* Jump2.wav in Resources */,
+				E63E93331B49F771006E4B8F /* Checkbox.wav in Resources */,
+				E63E93491B49F771006E4B8F /* Gear.wav in Resources */,
+				E63E93731B49F771006E4B8F /* Jump6.wav in Resources */,
+				E63E937D1B49F771006E4B8F /* ShieldTaken.wav in Resources */,
+				E63E93791B49F771006E4B8F /* Painkiller.wav in Resources */,
 				E6966FE61B4045DD0063EFF4 /* gearSpark.sks in Resources */,
-				E69670381B4045DD0063EFF4 /* blood4.atlas in Resources */,
-				E696704A1B4045DD0063EFF4 /* shield.atlas in Resources */,
-				E69670501B4045DD0063EFF4 /* drill.atlas in Resources */,
-				E69670361B4045DD0063EFF4 /* blood3.atlas in Resources */,
-				E6A24AAB1B43D77C00F01310 /* GameScene.wav in Resources */,
+				E63E934D1B49F771006E4B8F /* Highscore.wav in Resources */,
+				E63E935D1B49F771006E4B8F /* Hurt7.wav in Resources */,
+				E63E93611B49F771006E4B8F /* Hurt9.wav in Resources */,
+				E63E92F91B49F2E9006E4B8F /* blood3.atlas in Resources */,
+				E63BCB6F1B48743300FA7976 /* MainMenuScene.aac in Resources */,
 				E6966F701B4045660063EFF4 /* MainMenu.xib in Resources */,
-				E62917961B452C32004701DC /* icon.icns in Resources */,
+				E63E92FA1B49F2E9006E4B8F /* blood4.atlas in Resources */,
+				E63E93311B49F771006E4B8F /* Chain.wav in Resources */,
+				E63E93571B49F771006E4B8F /* Hurt4.wav in Resources */,
+				E63E932F1B49F771006E4B8F /* Blood.wav in Resources */,
+				E69A52BE1B4A76B100ADE19E /* GameScene.aac in Resources */,
+				E63E93471B49F771006E4B8F /* FadeOut.wav in Resources */,
+				E63E93751B49F771006E4B8F /* Jump7.wav in Resources */,
+				E63E93511B49F771006E4B8F /* Hurt1.wav in Resources */,
+				E63E936F1B49F771006E4B8F /* Jump4.wav in Resources */,
+				E63E93591B49F771006E4B8F /* Hurt5.wav in Resources */,
+				E63E934B1B49F771006E4B8F /* Gem.wav in Resources */,
+				E63E92F71B49F2E9006E4B8F /* blood1.atlas in Resources */,
+				E63E933B1B49F771006E4B8F /* Died3.wav in Resources */,
+				E63E936D1B49F771006E4B8F /* Jump3.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +1108,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -800,7 +1123,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -836,7 +1159,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -849,6 +1172,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -856,7 +1181,9 @@
 				INFOPLIST_FILE = "Iron cage/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ironcage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -865,6 +1192,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -872,7 +1201,9 @@
 				INFOPLIST_FILE = "Iron cage/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ironcage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -880,7 +1211,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Iron cage mac/Iron cage mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -890,7 +1223,9 @@
 				INFOPLIST_FILE = "Iron cage mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.eu5.adnan-zahid.ironcagemac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -899,14 +1234,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Iron cage mac/Iron cage mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Iron cage mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.eu5.adnan-zahid.ironcagemac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -932,7 +1271,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6966F7D1B4045660063EFF4 /* Build configuration list for PBXNativeTarget "Iron cage mac" */ = {
+		E6966F7D1B4045660063EFF4 /* Build configuration list for PBXNativeTarget "Iron Cage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6966F7E1B4045660063EFF4 /* Debug */,

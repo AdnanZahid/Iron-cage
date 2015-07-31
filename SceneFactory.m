@@ -13,7 +13,7 @@
 + (void)sceneFromScratch:(Class)scene view:(SKView *)view {
     
     view.ignoresSiblingOrder = YES;
-    view.showsFPS = YES;
+    view.showsFPS = NO;
     
     [view.scene addChild:[[[Background alloc] initWithWidthAndHeightAndImageNamed:view.scene.size.width height:view.scene.size.height imageName:@"prisonDoor"] sprite]];
     
@@ -21,11 +21,17 @@
     SKTransition *transition = [SKTransition doorsOpenHorizontalWithDuration:2];
     
     [view presentScene:newScene transition:transition];
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"soundOff"]) {
+        
+        [view.scene runAction:[SKAction playSoundFileNamed:@"PrisonDoor.wav" waitForCompletion:NO]];
+    }
 }
 
 + (void)sceneFromScene:(Class)scene target:(SKScene *)target {
     
     [target removeAllChildren];
+    [target removeAllActions];
     
     [self sceneFromScratch:scene view:target.view];
 }

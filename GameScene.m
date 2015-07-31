@@ -16,8 +16,9 @@
     hero.position = CGPointMake(width/8, height/4);
     
     hero.zPosition = 1;
+    hero.physicsBody.dynamic = YES;
     
-    [universe addChild:hero];
+    [self addChild:hero];
 }
 
 - (void)addPainkiller:(NSUInteger)distance {
@@ -73,6 +74,8 @@
     
     [world addChild:chain];
     [chain addJoints];
+    
+    [AudioFactory soundWithFilename:@"Chain" target:self];
 }
 
 - (void)addHook:(NSUInteger)distance {
@@ -88,6 +91,8 @@
     [hook addJoints];
     
     [self addHint:@"Shoot the red chain" onOrOff:@"hookOff"];
+    
+    [AudioFactory soundWithFilename:@"Hook" target:self];
 }
 
 - (void)addPlatformOrChain {
@@ -100,13 +105,13 @@
     }
 }
 
-- (void)addparticle {
+- (void)addParticle {
     
-    SKEmitterNode *particle = [ParticleFactory particleWithDuration:1 target:universe];
+    SKEmitterNode *particle = [ParticleFactory particleWithDuration:1 target:self];
     
     particle.zPosition = 7;
     
-    [[Shuriken sharedInstance] addChild:particle];
+    [[Shuriken sharedInstanceOnce] addChild:particle];
 }
 
 - (void)addBlood {
@@ -116,6 +121,8 @@
     blood.sprite.zPosition = 8;
     
     [hero addChild:blood.sprite];
+    
+    [AudioFactory soundWithFilename:@"Blood" target:self];
 }
 
 - (void)addPickupShield:(NSUInteger)distance {
@@ -137,6 +144,8 @@
     [hero addChild:shield.sprite];
     
     isShielded = YES;
+    
+    [AudioFactory soundWithFilename:@"ShieldTaken" target:self];
 }
 
 - (void)addEnemy {
@@ -154,7 +163,9 @@
         
         enemy.sprite.zPosition = 10;
         
-        [universe addChild:enemySprite];
+        [self addChild:enemySprite];
+        
+        [AudioFactory soundWithFilename:@"Enemy" target:self];
     });
 }
 
@@ -168,22 +179,21 @@
         [shuriken setHidden:NO];
         
         shuriken.position = CGPointMake(hero.position.x + shuriken.size.width, hero.position.y + shuriken.size.height);
-        [self addparticle];
+        [self addParticle];
         
         shuriken.zPosition = 11;
         
-        [universe addChild:shuriken];
+        [self addChild:shuriken];
         
-        SKAction *moveTowardsPlayer = [SKAction moveTo:CGPointMake(width * 2, shuriken.position.y) duration:2];
+        [AudioFactory soundWithFilename:@"Shuriken" target:self];
         
-        [shuriken runAction:moveTowardsPlayer];
+        SKAction *moveAwayFromPlayer = [SKAction moveTo:CGPointMake(width * 2, shuriken.position.y) duration:2];
         
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            
+        [shuriken runAction:moveAwayFromPlayer completion:^{
+        
             canAddShuriken = YES;
             [shuriken removeFromParent];
-        });
+        }];
     }
 }
 
@@ -236,13 +246,17 @@
     
     [GameKitHelper reportScore:gems];
     
-//    [self addChild:[[[Button alloc] initWithName:@"Highscore!" offset:0 X:width/2 Y:height/2] button]];
-    
     SKSpriteNode *highscore = [SKSpriteNode spriteNodeWithImageNamed:@"highscore"];
     highscore.position = CGPointMake(width/2, height/4);
     highscore.zPosition = 20;
     
     [self addChild:highscore];
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        [AudioFactory soundWithFilename:@"Highscore" target:self];
+    });
 }
 
 - (void)addHint:(NSString *)string onOrOff:(NSString *)onOrOff {
@@ -253,6 +267,8 @@
         [self addChild:[[[CloudyText alloc] initWithStringAndSceneAndGameOver:string scene:self gameOver:&gameOver] text]];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey: onOrOff];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [AudioFactory soundWithFilename:@"FadeOut" target:self];
     }
 }
 
@@ -268,11 +284,31 @@
     });
 }
 
+- (void)addBloodDied {
+    
+    NSString *bloodName = [NSString stringWithFormat:@"blood%d", 1 + arc4random_uniform(4)];
+    Blood *blood = [[Blood alloc] initWithNameAndDuration:bloodName duration:2];
+    
+    blood.sprite.xScale = 2;
+    blood.sprite.yScale = 2;
+    blood.sprite.zPosition = 8;
+    
+    [hero addChild:blood.sprite];
+}
+
 - (void)gameOver {
     
-    gameOver = YES;
+    NSString *diedSound = [NSString stringWithFormat:@"Died%d", 1 + arc4random_uniform(6)];
+    [AudioFactory soundWithFilename:diedSound target:self];
     
-//    [self addBlur];
+    hero.physicsBody.dynamic = NO;
+    
+    [self addBloodDied];
+    [self addBloodDied];
+    [self addBloodDied];
+    [self addBloodDied];
+    
+    gameOver = YES;
     
     [self addChild:[[[Button alloc] initWithName:@"Restart" offset:-2 X:width/2 Y:height/2] button]];
     [self addChild:[[[Button alloc] initWithName:@"Exit" offset:2 X:width/2 Y:height/2] button]];
@@ -281,13 +317,9 @@
         
         [self addHighscoreIcon];
     }
-    
-    self.paused = YES;
 }
 
 - (void)pause {
-    
-//    [self addBlur];
     
     resume = [[[Button alloc] initWithName:@"Resume" offset:-2 X:width/2 Y:height/2] button];
     restart = [[[Button alloc] initWithName:@"Restart" offset:0 X:width/2 Y:height/2] button];
@@ -297,10 +329,12 @@
     [self addChild:restart];
     [self addChild:exit];
     
-    self.paused = YES;
+    gameOver = YES;
 }
 
 - (void)killpain {
+    
+    [AudioFactory soundWithFilename:@"Painkiller" target:self];
     
     if (health <= 50) {
         health += 50;
@@ -326,6 +360,9 @@
         
         [self addBlood];
         
+        NSString *hurtSound = [NSString stringWithFormat:@"Hurt%d", 1 + arc4random_uniform(12)];
+        [AudioFactory soundWithFilename:hurtSound target:self];
+        
         [self timeDelayForDamage];
     }
     else {
@@ -344,25 +381,6 @@
     gemCount.text.text = gemString;
 }
 
--(void)addBlur {
-    
-//    CGFloat duration = 2;
-//    
-//    [self runAction:[SKAction customActionWithDuration:duration actionBlock:^(SKNode *node, CGFloat elapsedTime){
-//        
-//        NSNumber *radius = [NSNumber numberWithFloat:(elapsedTime/duration) * 10];
-//        CIFilter *blur = [CIFilter filterWithName:@"CIGaussianBlur" keysAndValues:@"inputRadius", radius, nil];
-//        
-////        [universe setFilter:blur];
-////        
-////        [universe setShouldRasterize:YES];
-////        [universe setShouldEnableEffects:YES];
-//        
-//    }] completion:^{
-        self.paused = YES;
-//    }];
-}
-
 - (void)addParallax {
     
     NSArray *imageNames = @[@"foreground", @"middleground", @"background"];
@@ -374,7 +392,7 @@
 #endif
     
     self.parallaxBackground = parallax;
-    [universe addChild:parallax];
+    [self addChild:parallax];
 }
 
 - (void)respawnEnemy:(CGFloat)X Y:(CGFloat)Y {

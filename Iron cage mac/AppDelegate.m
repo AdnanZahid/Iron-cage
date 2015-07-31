@@ -14,14 +14,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
+    [_window toggleFullScreen:nil];
+    [_window makeKeyWindow];
+    
     [SceneFactory sceneFromScratch:[MainMenuScene class] view:_skView];
     
     [iRate sharedInstance].applicationBundleID = @"org.eu5.adnan-zahid.ironcagemac";
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     [iRate sharedInstance].previewMode = NO;
-    
-    [_skView enterFullScreenMode:[NSScreen mainScreen] withOptions:nil];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

@@ -68,6 +68,8 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:EASY forKey:@"difficulty"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)MediumAction {
@@ -76,6 +78,8 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:MEDIUM forKey:@"difficulty"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)HardAction {
@@ -84,6 +88,8 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:HARD forKey:@"difficulty"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)ImpossibleAction {
@@ -92,11 +98,15 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:IMPOSSIBLE forKey:@"difficulty"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [AudioFactory soundWithFilename:@"Checkbox" target:self];
 }
 
 - (void)BackAction {
     
     [SceneFactory sceneFromScene:[MenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Back" target:self];
 }
 
 - (void)setDifficultyEasy {

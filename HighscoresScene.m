@@ -32,7 +32,9 @@
         [self addChild:[[[Text alloc] initWithStringAndXandY:string X:width/16 Y:(100 * (5-i) + 75)] text]];
     }
     
-    [self addChild:[[[Button alloc] initWithName:@"GameCenter" offset:2 X:width/2 Y:height * 0.65f] button]];
+    SKButton *gameCenter = [[[Button alloc] initWithName:@"GameCenter" offset:2 X:width/2 Y:height * 0.65f] button];
+    gameCenter.title.text = @"Game Center";
+    [self addChild:gameCenter];
     [self addChild:[[[Button alloc] initWithName:@"Back" offset:2 X:width/2 Y:height * 0.2f] button]];
 }
 
@@ -41,13 +43,17 @@
 #if TARGET_OS_IPHONE
     [[GameKitHelper sharedGameKitHelper] showLeaderboardAndAchievements:YES viewController:self.scene.view.window.rootViewController];
 #else
-    [[GameKitHelper sharedGameKitHelper] showLeaderboardAndAchievements:YES viewController:self.scene.view.window.contentViewController];
+    [[GameKitHelper sharedGameKitHelper] showLeaderboard:self.scene.view.window];
 #endif
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 - (void)BackAction {
     
     [SceneFactory sceneFromScene:[MenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Back" target:self];
 }
 
 @end

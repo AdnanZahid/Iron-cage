@@ -45,11 +45,15 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [SceneFactory sceneFromScene:[MyGameScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Click" target:self];
 }
 
 - (void)BackAction {
     
     [SceneFactory sceneFromScene:[MainMenuScene class] target:self];
+    
+    [AudioFactory soundWithFilename:@"Back" target:self];
 }
 
 @end

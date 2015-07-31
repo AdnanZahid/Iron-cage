@@ -51,10 +51,14 @@
 #pragma clang diagnostic ignored "-Wgnu"
 
 
-NSUInteger const iRateAppStoreGameGenreID = 1013566994;
+#if TARGET_OS_IPHONE
+    NSUInteger const iRateAppStoreGameGenreID = 1013566994;
+#else
+    NSUInteger const iRateAppStoreGameGenreID = 1013586639;
+#endif
+
+
 NSString *const iRateErrorDomain = @"iRateErrorDomain";
-
-
 NSString *const iRateMessageTitleKey = @"iRateMessageTitle";
 NSString *const iRateAppMessageKey = @"iRateAppMessage";
 NSString *const iRateGameMessageKey = @"iRateGameMessage";

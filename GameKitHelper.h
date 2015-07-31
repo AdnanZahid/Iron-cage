@@ -14,22 +14,23 @@ extern NSString *const PresentAuthenticationViewController;
 @interface GameKitHelper : NSObject<GKGameCenterControllerDelegate>
 
 #if TARGET_OS_IPHONE
-@property (nonatomic, readonly) UIViewController *authenticationViewController;
+
+    @property (nonatomic, readonly) UIViewController *authenticationViewController;
+
+    - (void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(UIViewController *)viewController;
+
 #else
-@property (nonatomic, readonly) NSViewController *authenticationViewController;
+
+    @property (nonatomic, readonly) NSViewController *authenticationViewController;
+
+    - (void)showLeaderboard:(NSWindow *)window;
+
 #endif
-@property (nonatomic, readonly) NSError *lastError;
 
 + (instancetype)sharedGameKitHelper;
 
 + (void)reportScore:(NSUInteger)gems;
 
 - (void)authenticateLocalPlayer;
-
-#if TARGET_OS_IPHONE
-- (void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(UIViewController *)viewController;
-#else
-- (void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard viewController:(NSViewController *)viewController;
-#endif
 
 @end

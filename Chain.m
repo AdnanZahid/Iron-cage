@@ -32,7 +32,7 @@ NSMutableArray *jointArray;
         pot.physicsBody.collisionBitMask = 0;
         pot.physicsBody.contactTestBitMask = HEROCATEGORY | LEFTCATEGORY;
         pot.physicsBody.restitution = 0;
-        pot.physicsBody.categoryBitMask = GROUNDCATEGORY;
+        pot.physicsBody.categoryBitMask = CHAINCATEGORY;
         
         [self addChild:pot];
         
@@ -66,7 +66,7 @@ NSMutableArray *jointArray;
     
     firstAnchor.physicsBody.collisionBitMask = HEROCATEGORY;
     firstAnchor.physicsBody.contactTestBitMask = HEROCATEGORY | LEFTCATEGORY;
-    firstAnchor.physicsBody.categoryBitMask = GROUNDCATEGORY;
+    firstAnchor.physicsBody.categoryBitMask = CHAINCATEGORY;
     
     [self addChild:firstAnchor];
     
@@ -93,7 +93,7 @@ NSMutableArray *jointArray;
         
         item.physicsBody.collisionBitMask = 0;
         item.physicsBody.contactTestBitMask = HEROCATEGORY | LEFTCATEGORY;
-        item.physicsBody.categoryBitMask = GROUNDCATEGORY;
+        item.physicsBody.categoryBitMask = CHAINCATEGORY;
         
         [self addChild:item];
         
